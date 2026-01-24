@@ -24,7 +24,7 @@ const projects = [
     },
     {
         title: "VitDaily",
-        description: "A comprehensive health or lifestyle tracking platform built with a modern tech stack. Designed for scalability and user engagement.",
+        description: "A daily management tool for teams and individuals, featuring Note, Task, and Workspace management to streamline workflow and collaboration.",
         icon: FaRocket,
         technologies: "Python, Django, Angular, MySQL, MongoDB",
         teamSize: 5,
