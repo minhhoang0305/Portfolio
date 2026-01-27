@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaPython, FaPhp, FaReact, FaGithub, FaCode, FaServer, FaDatabase, FaTools, FaHtml5, FaCss3 } from "react-icons/fa";
+import { FaPython, FaJs, FaReact, FaGithub, FaCode, FaServer, FaDatabase, FaTools, FaHtml5, FaCss3 } from "react-icons/fa";
 import { SiDjango, SiMongodb, SiMysql, SiPostman, SiPostgresql, SiNodedotjs, SiTailwindcss } from "react-icons/si";
 
 const skillsData = [
@@ -8,7 +8,7 @@ const skillsData = [
         icon: FaCode,
         skills: [
             { name: "Python", icon: FaPython, color: "#3776AB" },
-            { name: "PHP", icon: FaPhp, color: "#777BB4" },
+            { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
         ],
     },
     {

@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion , AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { FaGithub, FaRocket, FaCode, FaUsers, FaTasks, FaChevronLeft, FaChevronRight, FaComments, FaStore, FaCalendarAlt } from "react-icons/fa";
 import { MdCheckCircle } from "react-icons/md";
@@ -12,7 +12,7 @@ const projects = [
         technologies: "Python, FaceNet, SVM, OpenCV, MTCNN",
         teamSize: 5,
         role: "Backend Developer",
-        timeline: "August 2024 - December 2024",
+        timeline: "09/2025 - 11/2025",
         tasks: [
             "Implemented MTCNN for accurate face detection and alignment",
             "Generated 128-dimensional face embeddings using FaceNet",
@@ -29,7 +29,7 @@ const projects = [
         technologies: "Python, Django, Angular, MySQL, MongoDB",
         teamSize: 5,
         role: "Backend Developer",
-        timeline: "October 2024 - December 2024",
+        timeline: "09/2025 - 11/2025",
         tasks: [
             "Designed and implemented the database architecture using MySQL and MongoDB",
             "Developed note management features, including listing, creating, editing, deleting, and filtering notes",
@@ -49,7 +49,7 @@ const projects = [
         technologies: "Django, ReactJs, PostgreSQL, Redis, Docker",
         teamSize: 3,
         role: "Fullstack Developer",
-        timeline: "January 2025 - Present",
+        timeline: "12/2025 - Present",
         tasks: [
             "Implemented secure Authentication & Authorization system (Register/Login)",
             "Integrated GitHub OAuth for seamless social authentication",
