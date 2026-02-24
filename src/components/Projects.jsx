@@ -1,6 +1,6 @@
 import { motion , AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { FaGithub, FaRocket, FaCode, FaUsers, FaTasks, FaChevronLeft, FaChevronRight, FaComments, FaStore, FaCalendarAlt } from "react-icons/fa";
+import { FaGithub, FaRocket, FaCode, FaUsers, FaTasks, FaChevronLeft, FaChevronRight, FaComments, FaStore, FaCalendarAlt, FaMobile } from "react-icons/fa";
 import { MdCheckCircle } from "react-icons/md";
 import { GoDatabase } from "react-icons/go";
 
@@ -57,6 +57,27 @@ const projects = [
         ],
         techStack: ["Django", "ReactJs", "PostgreSQL", "Redis", "Docker"],
         link: "https://github.com/Sonhoccode/V3_Elerning.git"
+    },
+    {
+        title: "APPMOBILE",
+        description: "A comprehensive mobile application integrated with Express.js backend API for data management and processing. Features native Android development with robust backend support for file uploads, payment integration, and user management.",
+        icon: FaMobile,
+        technologies: "NodeJS, Android, MySQL, Multer, VNPay",
+        teamSize: 5,
+        role: "Backend Developer",
+        timeline: "05/2025 - 08/2025",
+        tasks: [
+            "Implemented RESTful API backend using Express.js with comprehensive endpoint coverage",
+            "Designed and implemented MySQL database architecture for optimal data management",
+            "Developed file upload functionality using Multer middleware with secure storage",
+            "Created Android native application with intuitive UI/UX design",
+            "Integrated VNPay payment gateway for secure transaction processing",
+            "Implemented session management and authentication system using Express-session",
+            "Optimized API performance with CORS, middleware configuration, and request validation",
+            "Built responsive dashboard for comprehensive user and data management"
+        ],
+        techStack: ["Express.js", "Android", "MySQL", "Node.js", "Multer", "VNPay"],
+        link: "https://github.com/minhhoang0305/Android-App.git"
     }
 ];
 
@@ -99,7 +120,7 @@ export default function Projects() {
     };
 
     return (
-        <section id="projects" className="py-20 px-6 relative z-10">
+        <section id="projects" className="relative z-10 px-6 py-20">
             <div className="container max-w-6xl mx-auto space-y-12">
 
                 {/* Header */}
@@ -108,10 +129,10 @@ export default function Projects() {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-bold text-white relative inline-block pb-2"
+                        className="relative inline-block pb-2 text-4xl font-bold text-white md:text-5xl"
                     >
                         Featured Projects
-                        <span className="absolute bottom-0 left-0 w-1/3 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
+                        <span className="absolute bottom-0 left-0 w-1/3 h-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-500" />
                     </motion.h2>
                 </div>
 
@@ -121,15 +142,15 @@ export default function Projects() {
                     {/* Nav Buttons */}
                     <button
                         onClick={prevSlide}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 transition-all -ml-6 md:-ml-20 hover:scale-110"
+                        className="absolute left-0 z-20 p-3 -ml-6 transition-all -translate-y-1/2 border rounded-full top-1/2 bg-white/5 hover:bg-white/10 border-white/5 md:-ml-20 hover:scale-110"
                     >
-                        <FaChevronLeft className="text-white text-xl" />
+                        <FaChevronLeft className="text-xl text-white" />
                     </button>
                     <button
                         onClick={nextSlide}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 transition-all -mr-6 md:-mr-20 hover:scale-110"
+                        className="absolute right-0 z-20 p-3 -mr-6 transition-all -translate-y-1/2 border rounded-full top-1/2 bg-white/5 hover:bg-white/10 border-white/5 md:-mr-20 hover:scale-110"
                     >
-                        <FaChevronRight className="text-white text-xl" />
+                        <FaChevronRight className="text-xl text-white" />
                     </button>
 
                     {/* Project Card */}
@@ -151,63 +172,63 @@ export default function Projects() {
                             >
                                 {/* Header Info */}
                                 <div className="flex items-center gap-4 mb-6">
-                                    <div className="p-3 bg-blue-500/10 rounded-xl text-blue-400">
+                                    <div className="p-3 text-blue-400 bg-blue-500/10 rounded-xl">
                                         {projects[currentIndex].icon({ size: 24 })}
                                     </div>
                                     <h3 className="text-2xl font-bold text-white">{projects[currentIndex].title}</h3>
                                 </div>
 
                                 {/* Description */}
-                                <p className="text-gray-300 leading-relaxed mb-8 border-b border-white/10 pb-6">
+                                <p className="pb-6 mb-8 leading-relaxed text-gray-300 border-b border-white/10">
                                     {projects[currentIndex].description}
                                 </p>
 
                                 {/* Data Grid */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 p-6 bg-black/20 rounded-2xl border border-white/5">
+                                <div className="grid grid-cols-1 gap-6 p-6 mb-8 border md:grid-cols-2 bg-black/20 rounded-2xl border-white/5">
                                     {/* Tech List String */}
                                     <div className="flex items-start gap-3 md:col-span-2">
-                                        <FaCode className="text-blue-400 mt-1 shrink-0" />
+                                        <FaCode className="mt-1 text-blue-400 shrink-0" />
                                         <div>
-                                            <span className="text-sm text-gray-400 block mb-1">Technologies</span>
+                                            <span className="block mb-1 text-sm text-gray-400">Technologies</span>
                                             <p className="text-white">{projects[currentIndex].technologies}</p>
                                         </div>
                                     </div>
 
                                     {/* Team Size */}
                                     <div className="flex items-start gap-3">
-                                        <FaUsers className="text-blue-400 mt-1 shrink-0" />
+                                        <FaUsers className="mt-1 text-blue-400 shrink-0" />
                                         <div>
-                                            <span className="text-sm text-gray-400 block mb-1">Team Size</span>
+                                            <span className="block mb-1 text-sm text-gray-400">Team Size</span>
                                             <p className="text-white">{projects[currentIndex].teamSize}</p>
                                         </div>
                                     </div>
 
                                     {/* Timeline */}
                                     <div className="flex items-start gap-3">
-                                        <FaCalendarAlt className="text-blue-400 mt-1 shrink-0" />
+                                        <FaCalendarAlt className="mt-1 text-blue-400 shrink-0" />
                                         <div>
-                                            <span className="text-sm text-gray-400 block mb-1">Timeline</span>
+                                            <span className="block mb-1 text-sm text-gray-400">Timeline</span>
                                             <p className="text-white">{projects[currentIndex].timeline}</p>
                                         </div>
                                     </div>
 
                                     {/* Role */}
                                     <div className="flex items-start gap-3 md:col-span-2">
-                                        <FaTasks className="text-blue-400 mt-1 shrink-0" />
+                                        <FaTasks className="mt-1 text-blue-400 shrink-0" />
                                         <div>
-                                            <span className="text-sm text-gray-400 block mb-1">My Role</span>
-                                            <p className="text-white font-medium">{projects[currentIndex].role}</p>
+                                            <span className="block mb-1 text-sm text-gray-400">My Role</span>
+                                            <p className="font-medium text-white">{projects[currentIndex].role}</p>
                                         </div>
                                     </div>
 
                                     {/* Tasks */}
                                     <div className="flex items-start gap-3 md:col-span-2">
-                                        <MdCheckCircle className="text-blue-400 mt-1 shrink-0" />
+                                        <MdCheckCircle className="mt-1 text-blue-400 shrink-0" />
                                         <div className="w-full">
-                                            <span className="text-sm text-gray-400 block mb-1">Tasks</span>
+                                            <span className="block mb-1 text-sm text-gray-400">Tasks</span>
                                             <ul className="space-y-2">
                                                 {projects[currentIndex].tasks.map((task, idx) => (
-                                                    <li key={idx} className="text-gray-300 text-sm leading-relaxed flex items-start gap-2">
+                                                    <li key={idx} className="flex items-start gap-2 text-sm leading-relaxed text-gray-300">
                                                         <span className="mt-1.5 w-1 h-1 rounded-full bg-blue-400 shrink-0" />
                                                         {task}
                                                     </li>
@@ -220,7 +241,7 @@ export default function Projects() {
                                 {/* Tech Stack Chips */}
                                 <div className="flex flex-wrap gap-2 mb-8">
                                     {projects[currentIndex].techStack.map((tech, idx) => (
-                                        <span key={idx} className="px-3 py-1 rounded-md bg-blue-900/30 border border-blue-500/30 text-blue-300 text-xs font-medium">
+                                        <span key={idx} className="px-3 py-1 text-xs font-medium text-blue-300 border rounded-md bg-blue-900/30 border-blue-500/30">
                                             {tech}
                                         </span>
                                     ))}
@@ -233,7 +254,7 @@ export default function Projects() {
                                         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-white text-sm font-medium transition-colors group"
                                     >
                                         Source code
-                                        <span className="group-hover:translate-x-1 transition-transform">→</span>
+                                        <span className="transition-transform group-hover:translate-x-1">→</span>
                                     </a>
                                 </div>
 
