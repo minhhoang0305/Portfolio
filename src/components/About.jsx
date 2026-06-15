@@ -66,6 +66,27 @@ export default function About() {
                         </div>
                     </motion.div>
 
+                    {/* Box 3: Experience */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.4 }}
+                        className="p-8 md:p-10 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col items-center text-center md:items-start md:text-left"
+                    >
+                        <h3 className="text-2xl font-bold text-blue-400 mb-6">Experience</h3>
+
+                        <div className="space-y-3">
+                            <h4 className="text-xl md:text-2xl font-bold text-white">Intern Software Developer - Lizai</h4>
+                            <p className="text-gray-400 text-lg">03/2026 - Present</p>
+                            <p className="text-gray-300 leading-relaxed max-w-3xl">
+                                Gaining hands-on experience in backend development and working with technologies such as ASP.NET Core,
+                                RabbitMQ, and Redis. Contributing to real-world project workflows while improving code quality, system
+                                thinking, and teamwork in a professional environment.
+                            </p>
+                        </div>
+                    </motion.div>
+
                 </div>
             </div>
         </section>

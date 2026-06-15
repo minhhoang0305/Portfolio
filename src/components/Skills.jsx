@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { FaPython, FaJs, FaReact, FaGithub, FaCode, FaServer, FaDatabase, FaTools, FaHtml5, FaCss3 } from "react-icons/fa";
-import { SiDjango, SiMongodb, SiMysql, SiPostman, SiPostgresql, SiNodedotjs, SiTailwindcss } from "react-icons/si";
+import { SiDjango, SiMongodb, SiMysql, SiPostman, SiPostgresql, SiNodedotjs, SiTailwindcss, SiSharp, SiRabbitmq, SiRedis } from "react-icons/si";
 
 const skillsData = [
     {
         category: "Programming Languages",
         icon: FaCode,
         skills: [
+            { name: "C#", icon: SiSharp, color: "#239120" },
             { name: "Python", icon: FaPython, color: "#3776AB" },
             { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
         ],
@@ -26,7 +27,16 @@ const skillsData = [
         icon: FaServer,
         skills: [
             { name: "NodeJs", icon: SiNodedotjs, color: "#339933" },
+            { name: "ASP.NET Core", icon: SiSharp, color: "#512BD4" },
             { name: "Django", icon: SiDjango, color: "#092E20" },
+        ],
+    },
+    {
+        category: "Messaging & Cache",
+        icon: FaServer,
+        skills: [
+            { name: "RabbitMQ", icon: SiRabbitmq, color: "#FF6600" },
+            { name: "Redis", icon: SiRedis, color: "#D82C20" },
         ],
     },
     {
