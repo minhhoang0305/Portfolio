@@ -1,13 +1,42 @@
-import { motion , AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { FaGithub, FaRocket, FaCode, FaUsers, FaTasks, FaChevronLeft, FaChevronRight, FaComments, FaStore, FaCalendarAlt, FaMobile } from "react-icons/fa";
+import {
+    FaRocket,
+    FaCode,
+    FaUsers,
+    FaTasks,
+    FaChevronLeft,
+    FaChevronRight,
+    FaComments,
+    FaStore,
+    FaCalendarAlt,
+    FaMobile
+} from "react-icons/fa";
 import { MdCheckCircle } from "react-icons/md";
-import { GoDatabase } from "react-icons/go";
 
 const projects = [
     {
-        title: "Hệ Thống Nhận Diện Khuôn Mặt (FaceNet + MTCNN)",
-        description: "An advanced face recognition system leveraging Deep Learning models. Uses MTCNN for face detection and alignment, FaceNet for feature extraction, and SVM for classification.",
+        title: "Ecommerce Backend System (.NET 10)",
+        description:
+            "A backend e-commerce project built with ASP.NET Core and Clean Architecture, focused on scalability, maintainability, and practical backend patterns. I also practiced RabbitMQ and Redis at a basic level while working on the project.",
+        icon: FaStore,
+        technologies: "ASP.NET Core, RabbitMQ, Redis, SQL Server, EF Core, JWT",
+        teamSize: 1,
+        role: "Backend Developer",
+        timeline: "2026",
+        tasks: [
+            "Designed the backend structure with Clean Architecture and CQRS",
+            "Implemented core e-commerce features such as products, carts, orders, coupons, and authentication",
+            "Integrated secure authentication with JWT Bearer and payment flow with VnPay",
+            "Practiced asynchronous messaging with RabbitMQ and caching concepts with Redis"
+        ],
+        techStack: ["ASP.NET Core", "CQRS", "RabbitMQ", "Redis", "SQL Server", "EF Core", "JWT", "VnPay"],
+        link: "https://github.com/minhhoang0305/Ecommerce"
+    },
+    {
+        title: "Face Recognition System",
+        description:
+            "An advanced face recognition system leveraging deep learning models. It uses MTCNN for face detection and alignment, FaceNet for feature extraction, and SVM for classification.",
         icon: FaComments,
         technologies: "Python, FaceNet, SVM, OpenCV, MTCNN",
         teamSize: 5,
@@ -16,15 +45,16 @@ const projects = [
         tasks: [
             "Implemented MTCNN for accurate face detection and alignment",
             "Generated 128-dimensional face embeddings using FaceNet",
-            "Trained SVM classifier to identify individuals with high accuracy",
-            "Optimized OpenCV video processing pipeline for real-time performance"
+            "Trained an SVM classifier to identify individuals with high accuracy",
+            "Optimized the OpenCV video processing pipeline for real-time performance"
         ],
         techStack: ["Python", "FaceNet", "SVM", "OpenCV", "MTCNN"],
         link: "https://github.com/minhhoang0305/ProjectXLA"
     },
     {
         title: "VitDaily",
-        description: "A daily management tool for teams and individuals, featuring Note, Task, and Workspace management to streamline workflow and collaboration.",
+        description:
+            "A daily management tool for teams and individuals, featuring note, task, and workspace management to streamline workflow and collaboration.",
         icon: FaRocket,
         technologies: "Python, Django, Angular, MySQL, MongoDB",
         teamSize: 5,
@@ -32,27 +62,28 @@ const projects = [
         timeline: "09/2025 - 11/2025",
         tasks: [
             "Designed and implemented the database architecture using MySQL and MongoDB",
-            "Developed note management features, including listing, creating, editing, deleting, and filtering notes",
-            "Built task management functionalities, including creating, updating, deleting, and filtering tasks",
-            "Implemented user authentication features, including user registration and login",
+            "Built note management features, including listing, creating, editing, deleting, and filtering notes",
+            "Built task management features, including creating, updating, deleting, and filtering tasks",
+            "Implemented user registration and login",
             "Developed workspace management features, including creating, updating, and deleting workspaces",
             "Implemented team management within workspaces, including creating, updating, deleting, and listing teams",
-            "Built task and subtask management systems, supporting full CRUD operations and task listing"
+            "Built task and subtask management systems with full CRUD support"
         ],
         techStack: ["Django", "Angular", "MySQL", "MongoDB"],
         link: "https://github.com/trunghau05/ProjectVitDaily.git"
     },
     {
         title: "V3-Elearning",
-        description: "A next-generation e-learning platform supporting course management, student enrollment, and progress tracking. Built for performance and scalability.",
+        description:
+            "A next-generation e-learning platform supporting course management, student enrollment, and progress tracking. Built for performance and scalability.",
         icon: FaStore,
         technologies: "Django, ReactJs, PostgreSQL, Redis, Docker",
         teamSize: 3,
         role: "Fullstack Developer",
         timeline: "12/2025 - Present",
         tasks: [
-            "Implemented secure Authentication & Authorization system (Register/Login)",
-            "Integrated GitHub OAuth for seamless social authentication",
+            "Implemented secure authentication and authorization with register and login",
+            "Integrated GitHub OAuth for social authentication",
             "Enhanced security layers for user data and session management"
         ],
         techStack: ["Django", "ReactJs", "PostgreSQL", "Redis", "Docker"],
@@ -60,21 +91,22 @@ const projects = [
     },
     {
         title: "APPMOBILE",
-        description: "A comprehensive mobile application integrated with Express.js backend API for data management and processing. Features native Android development with robust backend support for file uploads, payment integration, and user management.",
+        description:
+            "A comprehensive mobile application integrated with an Express.js backend API for data management and processing. It includes native Android development with support for file uploads, payment integration, and user management.",
         icon: FaMobile,
         technologies: "NodeJS, Android, MySQL, Multer, VNPay",
         teamSize: 5,
         role: "Backend Developer",
         timeline: "05/2025 - 08/2025",
         tasks: [
-            "Implemented RESTful API backend using Express.js with comprehensive endpoint coverage",
-            "Designed and implemented MySQL database architecture for optimal data management",
+            "Implemented a RESTful API backend using Express.js with comprehensive endpoint coverage",
+            "Designed and implemented the MySQL database architecture for optimal data management",
             "Developed file upload functionality using Multer middleware with secure storage",
-            "Created Android native application with intuitive UI/UX design",
+            "Created an Android native application with an intuitive UI/UX design",
             "Integrated VNPay payment gateway for secure transaction processing",
-            "Implemented session management and authentication system using Express-session",
+            "Implemented session management and authentication using Express-session",
             "Optimized API performance with CORS, middleware configuration, and request validation",
-            "Built responsive dashboard for comprehensive user and data management"
+            "Built a responsive dashboard for user and data management"
         ],
         techStack: ["Express.js", "Android", "MySQL", "Node.js", "Multer", "VNPay"],
         link: "https://github.com/minhhoang0305/Android-App.git"
@@ -82,27 +114,23 @@ const projects = [
 ];
 
 const variants = {
-    enter: (direction) => {
-        return {
-            x: direction > 0 ? 1000 : -1000,
-            opacity: 0,
-            scale: 0.8
-        };
-    },
+    enter: (direction) => ({
+        x: direction > 0 ? 1000 : -1000,
+        opacity: 0,
+        scale: 0.8
+    }),
     center: {
         zIndex: 1,
         x: 0,
         opacity: 1,
         scale: 1
     },
-    exit: (direction) => {
-        return {
-            zIndex: 0,
-            x: direction < 0 ? 1000 : -1000,
-            opacity: 0,
-            scale: 0.8
-        };
-    },
+    exit: (direction) => ({
+        zIndex: 0,
+        x: direction < 0 ? 1000 : -1000,
+        opacity: 0,
+        scale: 0.8
+    })
 };
 
 export default function Projects() {
@@ -122,8 +150,6 @@ export default function Projects() {
     return (
         <section id="projects" className="relative z-10 px-6 py-20">
             <div className="container max-w-6xl mx-auto space-y-12">
-
-                {/* Header */}
                 <div className="text-left">
                     <motion.h2
                         initial={{ opacity: 0, x: -20 }}
@@ -136,10 +162,7 @@ export default function Projects() {
                     </motion.h2>
                 </div>
 
-                {/* Carousel Container */}
                 <div className="relative">
-
-                    {/* Nav Buttons */}
                     <button
                         onClick={prevSlide}
                         className="absolute left-0 z-20 p-3 -ml-6 transition-all -translate-y-1/2 border rounded-full top-1/2 bg-white/5 hover:bg-white/10 border-white/5 md:-ml-20 hover:scale-110"
@@ -153,7 +176,6 @@ export default function Projects() {
                         <FaChevronRight className="text-xl text-white" />
                     </button>
 
-                    {/* Project Card */}
                     <div className="overflow-hidden min-h-[850px] relative">
                         <AnimatePresence initial={false} custom={direction} mode="wait">
                             <motion.div
@@ -170,7 +192,6 @@ export default function Projects() {
                                 }}
                                 className="p-8 rounded-3xl bg-[#0F172A]/50 border border-blue-500/20 backdrop-blur-sm w-full absolute top-0 left-0"
                             >
-                                {/* Header Info */}
                                 <div className="flex items-center gap-4 mb-6">
                                     <div className="p-3 text-blue-400 bg-blue-500/10 rounded-xl">
                                         {projects[currentIndex].icon({ size: 24 })}
@@ -178,14 +199,11 @@ export default function Projects() {
                                     <h3 className="text-2xl font-bold text-white">{projects[currentIndex].title}</h3>
                                 </div>
 
-                                {/* Description */}
                                 <p className="pb-6 mb-8 leading-relaxed text-gray-300 border-b border-white/10">
                                     {projects[currentIndex].description}
                                 </p>
 
-                                {/* Data Grid */}
                                 <div className="grid grid-cols-1 gap-6 p-6 mb-8 border md:grid-cols-2 bg-black/20 rounded-2xl border-white/5">
-                                    {/* Tech List String */}
                                     <div className="flex items-start gap-3 md:col-span-2">
                                         <FaCode className="mt-1 text-blue-400 shrink-0" />
                                         <div>
@@ -194,7 +212,6 @@ export default function Projects() {
                                         </div>
                                     </div>
 
-                                    {/* Team Size */}
                                     <div className="flex items-start gap-3">
                                         <FaUsers className="mt-1 text-blue-400 shrink-0" />
                                         <div>
@@ -203,7 +220,6 @@ export default function Projects() {
                                         </div>
                                     </div>
 
-                                    {/* Timeline */}
                                     <div className="flex items-start gap-3">
                                         <FaCalendarAlt className="mt-1 text-blue-400 shrink-0" />
                                         <div>
@@ -212,7 +228,6 @@ export default function Projects() {
                                         </div>
                                     </div>
 
-                                    {/* Role */}
                                     <div className="flex items-start gap-3 md:col-span-2">
                                         <FaTasks className="mt-1 text-blue-400 shrink-0" />
                                         <div>
@@ -221,7 +236,6 @@ export default function Projects() {
                                         </div>
                                     </div>
 
-                                    {/* Tasks */}
                                     <div className="flex items-start gap-3 md:col-span-2">
                                         <MdCheckCircle className="mt-1 text-blue-400 shrink-0" />
                                         <div className="w-full">
@@ -238,31 +252,30 @@ export default function Projects() {
                                     </div>
                                 </div>
 
-                                {/* Tech Stack Chips */}
                                 <div className="flex flex-wrap gap-2 mb-8">
                                     {projects[currentIndex].techStack.map((tech, idx) => (
-                                        <span key={idx} className="px-3 py-1 text-xs font-medium text-blue-300 border rounded-md bg-blue-900/30 border-blue-500/30">
+                                        <span
+                                            key={idx}
+                                            className="px-3 py-1 text-xs font-medium text-blue-300 border rounded-md bg-blue-900/30 border-blue-500/30"
+                                        >
                                             {tech}
                                         </span>
                                     ))}
                                 </div>
 
-                                {/* Link */}
                                 <div>
                                     <a
                                         href={projects[currentIndex].link}
                                         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-white text-sm font-medium transition-colors group"
                                     >
                                         Source code
-                                        <span className="transition-transform group-hover:translate-x-1">→</span>
+                                        <span className="transition-transform group-hover:translate-x-1">-&gt;</span>
                                     </a>
                                 </div>
-
                             </motion.div>
                         </AnimatePresence>
                     </div>
 
-                    {/* Dots */}
                     <div className="flex justify-center gap-2 mt-8">
                         {projects.map((_, idx) => (
                             <button
@@ -271,13 +284,13 @@ export default function Projects() {
                                     setDirection(idx > currentIndex ? 1 : -1);
                                     setCurrentIndex(idx);
                                 }}
-                                className={`w-3 h-3 rounded-full transition-all ${idx === currentIndex ? 'bg-blue-500 w-6' : 'bg-gray-600 hover:bg-gray-500'}`}
+                                className={`w-3 h-3 rounded-full transition-all ${
+                                    idx === currentIndex ? "bg-blue-500 w-6" : "bg-gray-600 hover:bg-gray-500"
+                                }`}
                             />
                         ))}
                     </div>
-
                 </div>
-
             </div>
         </section>
     );
